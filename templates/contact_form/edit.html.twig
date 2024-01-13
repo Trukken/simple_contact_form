@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit ContactForm{% endblock %}
+
+{% block body %}
+    <h1>Üzenet szerkesztése</h1>
+
+    {{ include('contact_form/_form.html.twig', {'button_label': 'Frissítés'}) }}
+
+    <a class="btn btn-info" href="{{ path('app_contact_form_index') }}">Üzenetek megtekintése</a>
+
+    {{ include('contact_form/_delete_form.html.twig') }}
+{% endblock %}

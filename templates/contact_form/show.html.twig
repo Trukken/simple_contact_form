@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ContactForm{% endblock %}
+
+{% block body %}
+    <h1>Üzenet</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ contact_form.id }}</td>
+            </tr>
+            <tr>
+                <th>Név</th>
+                <td>{{ contact_form.Name }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ contact_form.email }}</td>
+            </tr>
+            <tr>
+                <th>Üzenet</th>
+                <td>{{ contact_form.message }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a class="btn btn-primary" href="{{ path('app_contact_form_index') }}">Üzenetek megtekintése</a>
+
+    <a class="btn btn-info" href="{{ path('app_contact_form_edit', {'id': contact_form.id}) }}">Módosítás</a>
+
+    {{ include('contact_form/_delete_form.html.twig') }}
+{% endblock %}

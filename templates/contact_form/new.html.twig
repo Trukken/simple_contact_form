@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New ContactForm{% endblock %}
+
+{% block body %}
+    <h1>Új üzenet küldése</h1>
+
+    {{ include('contact_form/_form.html.twig') }}
+
+
+    {% if is_granted('ROLE_ADMIN') %}
+        <a href="{{ path('app_contact_form_index') }}">üzenetek megtekintése</a>
+    {% endif %}
+{% endblock %}

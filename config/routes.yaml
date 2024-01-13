@@ -1,3 +1,15 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+index:
+    path: /
+    controller: App\Controller\LoginController::index
+
+create_contact:
+    path: /contact/new
+    controller: App\Controller\ContactFormController::new
+
+app_logout:
+    path: /logout
+    methods: GET
+
+contact:
+    path: /contact
+    methods: GET

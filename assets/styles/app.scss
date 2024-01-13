@@ -1,0 +1,15 @@
+// assets/styles/global.scss
+
+// customize some Bootstrap variables
+$primary: darken(#428bca, 20%);
+
+.form-group {
+	margin-bottom: 1rem;
+}
+
+.btn {
+	margin: 0.5rem;
+}
+
+// the ~ allows you to reference things in node_modules
+@import "../../node_modules/bootstrap/scss/bootstrap";

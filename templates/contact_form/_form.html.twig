@@ -1,0 +1,9 @@
+{{ form_start(form) }}
+    {% form_theme form 'bootstrap_4_layout.html.twig' %}
+    {{ form_widget(form) }}
+    <div class="response alert" style="display: none;"></div>
+    <button id="submit-button" class="btn btn-primary">{{ button_label|default('Mentés') }}</button>
+    {% block javascripts %}
+        {{ encore_entry_script_tags('contact') }}
+    {% endblock %}
+{{ form_end(form) }}

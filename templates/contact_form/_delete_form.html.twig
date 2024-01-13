@@ -1,0 +1,4 @@
+<form method="post" action="{{ path('app_contact_form_delete', {'id': contact_form.id}) }}" onsubmit="return confirm('Biztos vagy benne, hogy törölni szeretnéd?');">
+    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ contact_form.id) }}">
+    <button class="btn btn-danger">Törlés</button>
+</form>
