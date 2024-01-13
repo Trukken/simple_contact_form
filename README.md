@@ -16,8 +16,9 @@ Unauthenticated felhasználó csak a contact form kitöltéséhez kapott jogot. 
 </ul>
 
 ### Segédlet
+```composer update``` <br>
+```composer install``` <br>
+```yarn install``` <br>
+```npm run watch``` <br>
 ```php bin/console doctrine:migrations:migrate``` <br>
 ```symfony server:start```
-
-#### Fejlesztés közben szükség lehet a node futtatására is
-```npm run watch```
